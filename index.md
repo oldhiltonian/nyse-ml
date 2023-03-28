@@ -2,4 +2,4 @@
 layout: home 
 ---
 
-Welcome to my new the project landing page!
+Welcome to the project landing page!
