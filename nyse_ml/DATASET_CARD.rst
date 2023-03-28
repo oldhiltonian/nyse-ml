@@ -28,9 +28,9 @@ Composition
 ^^^^^^^^^^^
 - 66627 instances
 - Each instance is a historical financial quarter for a company listed on the NYSE.
-- Each instance is indexed by a unique identifier of the format 'TICKER-YYYY-Q', \
-    where 'TICKER' is the company's ticker symbol, 'YYYY' is the year of the quarter \
-    and 'Q' is the quarter number (1, 2, 3 or 4). e.g. 'AAPL-2018-1' is the first quarter 
+- Each instance is indexed by a unique identifier of the format "TICKER-Qx-YYYY", \
+    where 'TICKER' is the company's ticker symbol, 'YYYY' is the financial year \
+    and Q'x' is the quarter number (1, 2, 3 or 4). e.g. 'AAPL-2018-Q1' is the first quarter 
     of 2018 for Apple Inc.
 - 66 features
 * 'date', 'start_date' and 'period' are the only non-numeric features and are present for identification.
