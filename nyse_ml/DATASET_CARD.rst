@@ -29,16 +29,18 @@ Composition
 - 66627 instances
 - Each instance is a historical financial quarter for a company listed on the NYSE.
 - Each instance is indexed by a unique identifier of the format "TICKER-Qx-YYYY", \
-    where 'TICKER' is the company's ticker symbol, 'YYYY' is the financial year \
-    and Q'x' is the quarter number (1, 2, 3 or 4). e.g. 'AAPL-2018-Q1' is the first quarter 
-    of 2018 for Apple Inc.
+where 'TICKER' is the company's ticker symbol, 'YYYY' is the financial year \
+and Q'x' is the quarter number (1, 2, 3 or 4). e.g. 'AAPL-2018-Q1' is the first quarter 
+of 2018 for Apple Inc.
+
 - 66 features
 * 'date', 'start_date' and 'period' are the only non-numeric features and are present for identification.
 * 'start_date' is actually repeated over a total of three columns.
 * 'priceRatioRelativeToS&P_1Q', 'priceRatioRelativeToS&P_2Q', 'priceRatioRelativeToS&P_3Q' and \
-    'priceRatioRelativeToS&P_4Q' are the columns that can be considred as labels. These detail the \
-    **future** relative price increase of the stock versus the S&P500. '1Q' is looking at the next quarter, \
-    '2Q' is looking at the quarter after that, and so on.
+'priceRatioRelativeToS&P_4Q' are the columns that can be considred as labels. These detail the \
+**future** relative price increase of the stock versus the S&P500. '1Q' is looking at the next quarter, \
+'2Q' is looking at the quarter after that, and so on.
+
 * The dataset was built in a greedy manner by keeping as many features as possible. This means that there are \
     many features that may be highly correlated with each other and care should be taken in the preprocessing steps.
 
