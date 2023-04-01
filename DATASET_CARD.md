@@ -37,9 +37,26 @@ The dataset was built using DatasetBuilder, a powerful tool for collecting and o
     that there are many features that may be highly correlated with each other and 
     care should be taken in the preprocessing steps.
 
-### Data Features
+### Dataset Information
 
-The dataset includes the following data keys:
+#### General insights
+1. Dataset shifts: This dataset holds data dating from the 1980s all the way to the present day. Keep in mind that the market dynamics might have changed over time, leading to possible dataset shifts. To account for these shifts, consider dividing the dataset into a training set and a test set using a time-based split. This will ensure that the model is trained on data that is representative of the time period it will be predicting on. One could also consider performing stationarity tests on the time series data. If requred, consider making use of techniques to make the time series data stationary.
+
+2. Leakage: The columns 'priceRatioRelativeToS&P_1Q', 'priceRatioRelativeToS&P_2Q', 'priceRatioRelativeToS&P_3Q', and 'priceRatioRelativeToS&P_4Q' can be considered as labels, indicating future relative price increases of the stock versus the S&P500. To prevent leakage, ensure that these columns are not used to calculate any other features and that they are not present as input features.
+
+3. Correlated features: The dataset was built in a greedy manner by keeping as many features as possible, meaning that there may be many features that are highly correlated with each other. To prevent overfitting and reduced model performance, perform feature selection or dimensionality reduction techniques to reduce the number of features in the dataset.
+
+4. Missing values: The dataset is completely raw and has not been processed. As such, there will certainly be NaN values that must be handled. 
+
+5. Data types: The only columns in the dataset that are not numeric are "date", "start_date" and "period". All others are either float64 or int64.
+
+6. Outliers: The dataset is completely raw and has not been processed. As such, there are likely to be outliers.
+
+7. Scaling: The dataset is completely raw and has not been processed. As such ll data is unscaled.
+
+#### Features
+# TODO: Add dtypes
+The dataset includes the following data features:
 - PE_avg
 - PE_high
 - PE_low
