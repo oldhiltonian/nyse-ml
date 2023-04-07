@@ -54,6 +54,8 @@
     "capexToDepreciation": [-10, 10],
     "capexToOperatingCashFlow": [-10, 10],
     "capexToRevenue": [-2, 2],
+    "ebitdaratio": [-5, 5],
+    "eps": [-10, 10],
     "daysSalesOutstanding": [-300, 1000],
     "debtToAssets": [-2, 2],
     "debtToEquity": [-5, 30],
